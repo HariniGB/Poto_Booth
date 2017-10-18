@@ -8,27 +8,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<h1><%= link_to "Photo Booth", posts_path, :class => "title" %></h1>
-    <% if user_signed_in? %>
-		<button> <%= link_to "Add new photo", new_post_path %></button>
-    <% end %>
+	<header role="banner" class="pad-t-1 pad-s-1 wrap-float no-bg">
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <nav>
-    <ul class="hmenu">
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
-    </ul>
-  </nav>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <!-- Navigation pane for sign-in, signup and logout -->
+      <nav class="clearfix mar-b-1 ">
+        <ul class="no-bullets no-margin no-padding right bg-white">
+          <%= render 'devise/menu/registration_items' %>
+          <%= render 'devise/menu/login_items' %>
+        </ul>
+      </nav>
+      <div class="logo-container bg-white">
+          <img class="logo" src="/assets/spartans-logo.png" class="center block">
+          <h1><%= link_to "Photo Booth", posts_path %></h1>
+      </div>
+      <br><br>
+      <% if user_signed_in? %>
+      <%= link_to "Add new photo", new_post_path, class: "button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center" %>
+      <% end %>
   </header>
-	<div id="main">
-		<%= yield %>
-	</div>
-	<footer>
-		This is the footer
-	</footer>
 
+	<div id="main" class="bg-dk-blue" >
+		<div class="center"><%= yield %></div>
+	</div>
+  <br><br>
+	<footer class="f1">
+		photo-booth &copy; Harini Balakrishnan, 2017
+	</footer>
 </body>
 </html>

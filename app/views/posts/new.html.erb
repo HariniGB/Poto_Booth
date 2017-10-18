@@ -1,17 +1,22 @@
-<%= form_for @post do |f| %>
-<div>
-	  <p>
-    	<%= f.label :title %>
-    	<%= f.text_field :title %>
-  	</p>
-    <p>
-      <%= f.label :description %>
-      <%= f.text_field :body %>
-    </p>
-  	<p>
-    	<%= f.file_field :image %>
-  	</p>
-    <br><br>
+<div class="bg-white">
+  <nav class="breadcrumb" style="text-align:center;">
+    <%= link_to "Home", posts_path %> / New Photo
+  </nav>
+  <%= form_for @post do |f| %>
+  	  <p>
+      	<%= f.label :title, class: "block mar-b-1" %>
+      	<%= f.text_field :title, class: "block w-100 no-outline no-border pad-1 mar-b-2" %>
+    	</p>
+      <br>
+      <p>
+        <%= f.label :description, class: "block mar-b-1" %>
+        <%= f.text_field :body, class: "block w-100 h-10 no-outline no-border pad-1 mar-b-2" %>
+      </p>
+      <br>
+    	<p>
+      	<%= f.file_field :image, class: "block mar-b-1" %>
+    	</p>
+      <br>
+  	<%= f.submit 'Submit', class: "block button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline" %>
+  <% end %>
 </div>
-  	<%= f.submit %>
-<% end %>

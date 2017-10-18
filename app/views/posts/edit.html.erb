@@ -1,22 +1,26 @@
-<p><%= link_to "Home", posts_path %></p>
+<div class="bg-white">
+<nav class="breadcrumb" style="text-align:center;"><%= link_to "Home", posts_path %> / Edit Photo </nav>
 <% if user_signed_in? %>
-<h1>Edit your entry:</h1>
+  <h2>Edit your photo:</h2>
 
-<%= form_for @post, :html => { :multipart => true } do |f| %>
-	  <p>
-    	<%= f.label :title %>
-    	<%= f.text_field :title %>
-  	</p>
-    <p>
-      <%= f.label :body %>
-      <%= f.text_field :body %>
-    </p>
-  	<p>
-    	<%= f.file_field :image %>
-  	</p>
-
-  	<%= f.submit %>
-<% end %>
+  <%= form_for @post, class: "bg-white",  :html => { :multipart => true } do |f| %>
+  	  <p>
+      	<%= f.label :title, class: "block mar-b-1" %>
+      	<%= f.text_field :title, class: "block w-100 no-outline no-border pad-1 mar-b-2" %>
+    	</p>
+      <br>
+      <p>
+        <%= f.label :description, class: "block mar-b-1" %>
+        <%= f.text_field :body, class: "block w-100 h-10 no-resize no-outline no-border no-resize pad-1 mar-b-2" %>
+      </p>
+      <br>
+    	<p>
+      	<%= f.file_field :image, class: "block mar-b-1" %>
+    	</p>
+      <br>
+    	<%= f.submit 'Submit', class: "block button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline" %>
+    <% end %>
 <% else %>
 <h1> Sorry, You are not authorized to edit this Photo!</h1>
 <% end %>
+</div>

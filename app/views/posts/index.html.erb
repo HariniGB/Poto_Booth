@@ -1,11 +1,17 @@
 <article>
-
 	<% @array.each do |row| %>
 		<div class="Row">
 			<div class="Grid">
 				<% row.compact.each do |p| %>
 					<div class="Grid--1ofX">
-						<a href="/posts/<%= p.id %>"><%= image_tag p.image.url(:large) %></a>
+						<a href="/posts/<%= p.id %>">
+							<% @user =  User.find(p.user_id) %>
+							<% if user_signed_in? &&  current_user.id==@user.id %>
+							 <%= image_tag p.image.url(:large) %>
+								<% else %>
+							 <%= link_to(image_tag("no-image.png", width: 200,height: 200, alt: "No image")) %>
+							 <% end %>
+							</a>
 					</div>
 				<% end %>
 			</div>
@@ -13,7 +19,3 @@
 	<% end %>
 
 </article>
-	
-<aside>
-	Sidebar
-</aside>

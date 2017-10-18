@@ -3,7 +3,7 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -80,12 +80,13 @@ Rails.application.configure do
   # config for amazon S3 and paperclip
   config.paperclip_defaults = {
     :storage => :s3,
-    # :s3_protocol => 'http',
+    #:s3_protocol => 'http',
+    :preserve_files => true,
     :s3_credentials => {
-      :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
+    },
+    :bucket => ENV['S3_BUCKET_NAME']
   }
 
 end

@@ -17,3 +17,27 @@
 /** {
 	border: 1px solid red !important;
 }*/
+
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;
+}
+
+aside {
+    margin-left: 500px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+section.image-show{
+    float: left;
+    max-width: 360px;
+    margin: 0;
+    padding: 1em;
+}

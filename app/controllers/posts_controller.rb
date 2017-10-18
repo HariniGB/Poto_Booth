@@ -1,22 +1,22 @@
 class PostsController < ApplicationController
 	include RowHelper
 	before_action :find_post, except: [:index, :new, :create]
-
+  before_action :authenticate_user!, except: [:index, :show]
 	def index
 		@array = []
-		posts = Post.all.shuffle
-		row_split(posts)
+		@posts = Post.all.shuffle
+		row_split(@posts)
 	end
 
 	def show
 	end
 
 	def new
-		@post = Post.new
+		@post = current_user.posts.build
 	end
 
 	def create
-		@post = Post.new(post_params)
+		@post = current_user.posts.build(post_params)
 
 		if @post.save
 			redirect_to posts_path
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update(post_params)
-			redirect_to posts_path
+			redirect_to post_path
 		else
 			render :edit
 		end
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :image)
+		params.require(:post).permit(:title, :body, :image)
 	end
 
 	def find_post

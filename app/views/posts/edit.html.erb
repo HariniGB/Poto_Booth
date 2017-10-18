@@ -1,15 +1,22 @@
 <p><%= link_to "Home", posts_path %></p>
-
+<% if user_signed_in? %>
 <h1>Edit your entry:</h1>
 
 <%= form_for @post, :html => { :multipart => true } do |f| %>
-	<p>
+	  <p>
     	<%= f.label :title %>
     	<%= f.text_field :title %>
   	</p>
+    <p>
+      <%= f.label :body %>
+      <%= f.text_field :body %>
+    </p>
   	<p>
     	<%= f.file_field :image %>
   	</p>
 
   	<%= f.submit %>
+<% end %>
+<% else %>
+<h1> Sorry, You are not authorized to edit this Photo!</h1>
 <% end %>

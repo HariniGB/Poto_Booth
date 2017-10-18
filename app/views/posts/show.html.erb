@@ -1,11 +1,29 @@
-<p class="breadcrumb">
-	<%= link_to "Home", posts_path %> / Image details
-</p>
-
+<nav class="breadcrumb">
+	<%= link_to "Home", posts_path %> / Photo details
+</nav>
+<% @user =  User.find(@post.user_id) %>
 <div class="image_container">
 	<h1><%= @post.title %></h1><br>
-
-	<%= image_tag @post.image.url(:large), :class => "image_show" %><br>
-
+  <section class="image-show">
+    <% if user_signed_in? &&  current_user.id==@user.id %>
+	   <%= image_tag @post.image.url(:large), :class => "image_show" %><br>
+    <% else %>
+    <h4 style="color:red;">Unauthorized access !!!</h4>
+    <p> Sorry, You can't view or download the image </p>
+    <% end %>
+  </section>
+  <aside style="text-align:left;">
+     <p> Created by:   <%= @user.first_name %>  <%= @user.last_name %> </p><br><br><br>
+     <p>Description:   <% if  @post.body %><%= @post.body %><% else %> *** NOTHING ***<% end %> </p><br><br><br>
+    <p>File Upload Time:  <%= @post.created_at.strftime("On %m/%d/%Y  at %I:%M%p") %></p><br><br><br>
+    <p>File Updated Time:  <%= @post.updated_at.strftime("On %m/%d/%Y  at %I:%M%p") %></p><br><br><br>
+    <p>Image Updated Time:  <%= @post.image_updated_at.strftime("On %m/%d/%Y  at %I:%M%p") %></p>
+  </aside>
+  <% if user_signed_in? &&  current_user.id==@user.id %>
 	<%= link_to "Delete", @post, :method => :delete %> / <%= link_to "Edit", edit_post_path(@post) %>
+  <br>
+  <button><a href="<%=  @post.image.url(:large)%>" download> Download</a></button>
+  <% end %>
+  <br><br>
 </div>
+

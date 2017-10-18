@@ -1,11 +1,17 @@
 <%= form_for @post do |f| %>
-	<p>
+<div>
+	  <p>
     	<%= f.label :title %>
     	<%= f.text_field :title %>
   	</p>
+    <p>
+      <%= f.label :description %>
+      <%= f.text_field :body %>
+    </p>
   	<p>
     	<%= f.file_field :image %>
   	</p>
-
+    <br><br>
+</div>
   	<%= f.submit %>
 <% end %>

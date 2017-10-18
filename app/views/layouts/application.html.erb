@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ImageTestApp</title>
+  <title>PhotoBooth</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato' %>
@@ -9,14 +9,23 @@
 </head>
 <body>
 	<header>
-		<h1><%= link_to "Image App: Paperclip, S3, Flex and Sass", posts_path, :class => "title" %></h1>
-		<%= link_to "Add new post", new_post_path %>
-	</header>
+		<h1><%= link_to "Photo Booth", posts_path, :class => "title" %></h1>
+    <% if user_signed_in? %>
+		<button> <%= link_to "Add new photo", new_post_path %></button>
+    <% end %>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <nav>
+    <ul class="hmenu">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items' %>
+    </ul>
+  </nav>
+  </header>
 	<div id="main">
 		<%= yield %>
 	</div>
-
 	<footer>
 		This is the footer
 	</footer>

@@ -1,21 +1,17 @@
-<nav class="breadcrumb bg-white">
+<nav class="breadcrumb bg-white" style="text-align:center;">
 	<%= link_to "Home", posts_path %> / Photo details
 </nav>
 <% @user =  User.find(@post.user_id) %>
 <div class="image_container">
-	<h2 style="color:white;"><%= @post.title %></h2>
+	<h2 style="color:#06447f;"><%= @post.title %></h2>
   <section class="image-show">
     <% if user_signed_in? &&  current_user.id==@user.id %>
-	   <%= image_tag @post.image.url(:large), class:"no-bg" %>
-    <% else %>
-    <h4 style="color:red;">Unauthorized access !!!</h4>
-    <p class="bg-white"> Sorry, You can't view or download the image </p>
+	   <%= image_tag cf_url(@post.image.path(:large))%>
     <% end %>
-    <br><br><br>
   </section>
 
   <!-- List the image description, upload, update time with user first name and last name -->
-  <br><br>
+
   <aside class="entry-stub bg-white" >
      <p> Created by:   <%= @user.first_name %>  <%= @user.last_name %> </p><br>
      <p>Description:   <% if  @post.body %><%= @post.body %><% else %> *** NOTHING ***<% end %> </p><br>
@@ -29,7 +25,7 @@
     <ul class="bg-white no-bullets no-padding mar-t-2">
     	<li class="pipe-separate left"><%= link_to "Edit", edit_post_path(@post) %> </li>
       <li class="pipe-separate left"><%= link_to "Delete", @post, :method => :delete %> </li>
-      <li class="pipe-separate left"><a href="<%=  @post.image.url(:large)%>" download> Download </a></li>
+      <li class="pipe-separate left"><a href="<%=  cf_url(@post.image.path(:large)) %>" download> Download </a></li>
       <% end %>
     </ul>
   </aside>

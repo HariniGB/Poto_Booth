@@ -1,21 +1,25 @@
 <div class="bg-white">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <nav class="breadcrumb" style="text-align:center;">
+    <%= link_to "Back", :back %>
+  </nav>
+<br>
+<h2>Edit Profile<%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :first_name, class: "block mar-b-1" %><br />
+    <%= f.label :first_name, class: "block mar-b-1" %>
     <%= f.text_field :first_name, autofocus: true, class: "block w-100 no-outline no-border pad-1 mar-b-2" %>
   </div>
   <br />
   <div class="field">
-    <%= f.label :last_name, class: "block mar-b-1" %><br />
+    <%= f.label :last_name, class: "block mar-b-1" %>
     <%= f.text_field :last_name, autofocus: true, class: "block w-100 no-outline no-border pad-1 mar-b-2" %>
   </div>
   <br />
   <div class="field">
-    <%= f.label :email, class: "block mar-b-1"%><br />
+    <%= f.label :email, class: "block mar-b-1"%>
     <%= f.email_field :email, autofocus: true, class: "block w-100 no-outline no-border pad-1 mar-b-2" %>
   </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -23,7 +27,7 @@
   <% end %>
   <br />
   <div class="field">
-    <%= f.label :password, class: "block mar-b-1" %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password, class: "block mar-b-1" %> <i>(leave blank if you don't want to change it)</i>
     <%= f.password_field :password, autocomplete: "off", class: "block w-100 h-10 no-resize no-outline no-border no-resize pad-1 mar-b-2"%>
     <% if @minimum_password_length %>
       <br />
@@ -32,12 +36,12 @@
   </div>
   <br />
   <div class="field">
-    <%= f.label :password_confirmation, class: "block mar-b-1" %><br />
+    <%= f.label :password_confirmation, class: "block mar-b-1" %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "block w-100 h-10 no-resize no-outline no-border no-resize pad-1 mar-b-2"  %>
   </div>
   <br />
   <div class="field">
-    <%= f.label :current_password, class: "block mar-b-1" %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password, class: "block mar-b-1" %> <i>(we need your current password to confirm your changes)</i>
     <%= f.password_field :current_password, autocomplete: "off", class: "block w-100 h-10 no-resize no-outline no-border no-resize pad-1 mar-b-2"  %>
   </div>
   <br />
@@ -50,6 +54,5 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "block button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline" %></p>
 </div>
-<br />
-<%= link_to "Back", :back, class: "block button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline" %>
-<br />
+<br>
+<br>

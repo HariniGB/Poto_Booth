@@ -7,7 +7,7 @@
 						<a href="/posts/<%= p.id %>">
 							<% @user =  User.find(p.user_id) %>
 							<% if user_signed_in? &&  current_user.id==@user.id %>
-							 <%= image_tag p.image.url(:large), class:"no-bg" %>
+							 <%= image_tag cf_url(p.image.path), class:"no-bg" %>
 								<% else %>
 							 <%= link_to(image_tag("no-image.png", width: 200,height: 200, alt: "No image")) %>
 							 <% end %>

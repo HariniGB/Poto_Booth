@@ -22,11 +22,14 @@
 /* element styling */
 html {
   height: 100%;
+  line-height: 1.4;
+  color: #000000;
+  font-size: 16;
+}
+header{
   background-color: #009CC9;
   background: url(/assets/background.jpg);
   background-attachment: fixed;
-  line-height: 1.4;
-  color: #000000;
 }
 
 body {
@@ -320,8 +323,8 @@ a.c-white:hover {
   background-color: #fefefe;
   border: 5px solid #066ea3;
   color: #066ea3;
-  width: 305px;
-  height: 305px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   padding: 20px;
   margin: 0 auto;

@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PhotoBooth</title>
+  <title>PotoBooth</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header role="banner" class="pad-t-1 pad-s-1 wrap-float no-bg">
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+	<header role="banner">
       <!-- Navigation pane for sign-in, signup and logout -->
+      <div class="logo-container bg-white">
+          <img class="logo" src="/assets/spartans-logo.png" class="center block">
+          <h1><%= link_to "Poto Booth", posts_path %></h1>
+      </div>
       <nav class="clearfix mar-b-1 ">
         <ul class="no-bullets no-margin no-padding right bg-white">
           <%= render 'devise/menu/registration_items' %>
           <%= render 'devise/menu/login_items' %>
         </ul>
       </nav>
-      <div class="logo-container bg-white">
-          <img class="logo" src="/assets/spartans-logo.png" class="center block">
-          <h1><%= link_to "Photo Booth", posts_path %></h1>
-      </div>
-      <br><br>
       <% if user_signed_in? %>
-      <%= link_to "Add new photo", new_post_path, class: "button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center" %>
+      <%= link_to "Add new photo", new_post_path, class: "button w-100 round-1 text-c center" %>
       <% end %>
+      <br>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
   </header>
 
-	<div id="main" class="bg-dk-blue" >
+	<div id="main">
 		<div class="center"><%= yield %></div>
 	</div>
   <br><br>
 	<footer class="f1">
-		photo-booth &copy; Harini Balakrishnan, 2017
+		potobooth.com &copy; Harini Balakrishnan 2017
 	</footer>
 </body>
 </html>

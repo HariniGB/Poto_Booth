@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -22,7 +22,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# bundle exec warbler:generates war file to deploy in aws server
+# gem 'warbler', '~> 1.4', '>= 1.4.9'
+gem 'puma'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
  gem 'devise', '~> 4.2', :groups => [:development, :test]
@@ -44,7 +46,7 @@ group :development, :test do
 end
 
 gem 'pry-rails'
-gem 'aws-sdk', '~> 1.5.7'	# amazon web services gem, appears version 2 not compatible with paperclip yet
+gem 'aws-sdk', '~> 2.0.0'	# amazon web services gem, appears version 2 not compatible with paperclip yet
 gem 'paperclip' 		# paperclip gem for file management
 # gem 'fog-aws', '~> 1.4.1'
 gem 'dotenv-rails', :groups => [:development, :test]	# env variable to keep sensitive data hidden

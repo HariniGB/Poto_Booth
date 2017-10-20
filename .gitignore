@@ -15,3 +15,8 @@
 # Ignore files which contain AWS keys
 config/aws.yml
 .env
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

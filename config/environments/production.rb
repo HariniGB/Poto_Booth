@@ -82,7 +82,7 @@ Rails.application.configure do
     :storage => :s3,
     #:s3_protocol => 'http',
     :preserve_files => true,s
-    s3_region: ENV["AWS_S3_REGION"],
+    # s3_region: ENV["AWS_S3_REGION"],
     :s3_credentials => {
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']

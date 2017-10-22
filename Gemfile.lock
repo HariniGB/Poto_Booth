@@ -118,7 +118,6 @@ GEM
       method_source (~> 0.9.0)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
-    puma (3.10.0)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -209,7 +208,6 @@ DEPENDENCIES
   paperclip
   pg
   pry-rails
-  puma
   rails (= 4.2.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

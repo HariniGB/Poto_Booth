@@ -23,7 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # bundle exec warbler:generates war file to deploy in aws server
-# gem 'warbler', '~> 1.4', '>= 1.4.9'
+gem 'warbler', '~> 1.4', '>= 1.4.9'
+gem 'jruby-openssl'
 # gem 'puma'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'

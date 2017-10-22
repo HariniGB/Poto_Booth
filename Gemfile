@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # bundle exec warbler:generates war file to deploy in aws server
 gem 'warbler', '~> 1.4', '>= 1.4.9'
-gem 'jruby-openssl'
+# gem 'jruby-openssl'
 # gem 'puma'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
@@ -43,7 +43,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring', '~> 1.3.4'
+  #gem 'spring', '~> 1.3.4'
 end
 
 gem 'pry-rails'

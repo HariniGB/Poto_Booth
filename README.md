@@ -10,18 +10,18 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 ## Table of content
 
 - [Details](#details)
-    - [University](#university_name)
-    - [Course](#course_name)
-    - [Professor](#professor_and_isa)
-    - [Student](#student_name)
+    - [University](#university-name)
+    - [Course](#course-name)
+    - [Professor](#professor-and-isa)
+    - [Student](#student-name)
 - [Introduction](#introduction)
-    - [Feature List](#feature_list)
+    - [Feature List](#feature-list)
 - [Demo](#demo)
     - [Login/Sign-up](#login)
-    - [Upload](#upload_a_new_image_to_cloud)
-    - [View](#view_image_details_in_list_page)
-    - [Download](#download_from_cloud_front_faster)
-    - [Update](#update_both_contents_and_image_file)
+    - [Upload](#upload-a-new-image-to-cloud)
+    - [View](#view-image-details-in-list-page)
+    - [Download](#download-from-cloud-front-faster)
+    - [Update](#update-both-contents-and-image-file)
 - [Links](#links)
 
 ## Details
@@ -33,13 +33,13 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 ![CLOUD TECHNOLOGIES](info.sjsu.edu/web-dbgen/catalog/courses/CMPE281.html)
 
 ### Professor and ISA 
-Porfessor: ![Mr.SANJAY GARJE](https://www.linkedin.com/in/sanjaygarje/)
+Porfessor: [Mr.SANJAY GARJE](https://www.linkedin.com/in/sanjaygarje/)
 
-ISA:  ![DIVYANKITHA Urs](https://www.linkedin.com/in/divyankithaurs/)
+ISA:  [DIVYANKITHA Urs](https://www.linkedin.com/in/divyankithaurs/)
 
 ### Student Name
 
-![HARINI BALAKRISHNAN](https://www.linkedin.com/in/harini-balakrishnan/)
+[HARINI BALAKRISHNAN](https://www.linkedin.com/in/harini-balakrishnan/)
 
 ## Introduction
 Poto booth is a cloud born 3 tier web application, that provides the end users a secured environment to upload, download, view and modify their image files. This application provides features like cloud based object storage, security and efficient file management. This application also maintains a relationship between the user and the file they uploaded by tracking details like which user uploaded, updated the image file at what time. Main idea behind this application is to build unlimited storage space to upload image files, download those files with faster data retrieval from public internet, maintain the file details in a database and perform all these operations with user authentication. As a developer, I wanted to build an application that is highly scalable, highly available, load balanced with auto recoverable with 24x7 monitoring services. But I also wanted to develop this application with simple workflows and processes without costing more money. Keeping these featured in my mind, I decided to build this application using AWS Cloud services. By deploying this application in cloud-based infrastructure like Amazon Web Services (AWS), the application got instant advantages like auto scaling, on-demand provisioning, full automation and multiple integrated services. By using AWS cloud services, I was able to implement additional features like versioning of storage which keeps track of the updates in the image files by default, cross-region replication that makes the stored files available in different Availability Zones (AZs) and supports faster data transfer.

@@ -105,5 +105,5 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 ## Links
 
 * [Web site](http://www.potobooth.com:3000/)
-* [Documentation](https://github.com/HariniGB/my_cloud_project/)
+* [Documentation](https://github.com/HariniGB/my_cloud_project/blob/master/README.md)
 * [Source code](https://github.com/HariniGB/my_cloud_project/)

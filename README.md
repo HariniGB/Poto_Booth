@@ -1,4 +1,4 @@
-<a href="http://www.potobooth.com"><img src="http://www.potobooth.com:3000/assets/spartans-logo.png" alt="Poto Booth logo" title="Poto Booth" align="right" height="60" /></a>
+<a href="http://www.potobooth.com"><img src="http://www.potobooth.com/assets/spartans-logo.png" alt="Poto Booth logo" title="Poto Booth" align="right" height="60" /></a>
 
 Poto Booth Website
 ==================

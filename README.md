@@ -75,14 +75,13 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 * You can Edit/ Delete the file from this form
 * The images are retrieved from S3 via AWS CloudFront distribution Edge Location
 
-![View the image details](https://i.imgur.com/0xcNbJ0.png)
+![View the image details](https://i.imgur.com/YMEB4Uz.png)
 
 ### Download from cloud front faster
 
 * In the home page click on any image tha that you want to download
 * Click the 'Downlaod' button
 * Th image will be downloaded in your local machine in the 'Downloads' folder
-![Delete your image file](https://i.imgur.com/YMEB4Uz.png)
 
 ### Update both contents and image file
 

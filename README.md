@@ -1,11 +1,11 @@
-<a href="http://www.potobooth.com:3000/"><img src="http://www.potobooth.com:3000/assets/spartans-logo.png" alt="Poto Booth logo" title="Poto Booth" align="right" height="60" /></a>
+<a href="http://www.potobooth.com"><img src="http://www.potobooth.com:3000/assets/spartans-logo.png" alt="Poto Booth logo" title="Poto Booth" align="right" height="60" /></a>
 
 Poto Booth Website
 ==================
 
 Poto booth is a cloud born 3 tier web application, that provides the end users a secured environment to upload, download, view and modify their image files in cloud. This application is entirely build on Amazon Web Services (AWS) like EC2, ELB, Lambda, AutoScaling Group, RDS (PostgreSQL), CloudFront, S3, S3 Transfer Acceleration, R53, CloudWatch, SNS and Route 53.
 
-[![Poto Booth demo](https://i.imgur.com/Og6wFgh.png)](https://i.imgur.com/uFTjoy3.png)
+[![Poto Booth demo](https://i.imgur.com/co7enBZ.png)](http://www.potobooth.com/)
 
 ## Table of content
 
@@ -67,7 +67,7 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 * Provide emailID and password
 * Click "Login" 
 
-![Login](https://i.imgur.com/8LfxvTd.png)
+![Login](https://i.imgur.com/XbaWvw9.png)
 
 ### Upload a new image to cloud
 
@@ -76,7 +76,7 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 * Press 'Submit' button.
 * Uploaded successflly in the cloud AWS S3
 
-![Upload new image form](https://i.imgur.com/thDcSF1.png)
+![Upload new image form](https://i.imgur.com/n4bUEMu.png)
 
 ### View image details in list page
 
@@ -86,13 +86,14 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 * You can Edit/ Delete the file from this form
 * The images are retrieved from S3 via AWS CloudFront distribution Edge Location
 
-![View the image details](https://i.imgur.com/Og6wFgh.png)
+![View the image details](https://i.imgur.com/0xcNbJ0.png)
 
 ### Download from cloud front faster
 
 * In the home page click on any image tha that you want to download
 * Click the 'Downlaod' button
 * Th image will be downloaded in your local machine in the 'Downloads' folder
+![Delete your image file](https://i.imgur.com/YMEB4Uz.png)
 
 ### Update both contents and image file
 
@@ -100,10 +101,10 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 * Click 'Edit' 
 * You can Update Title, Description and the image file itself by uploading a new file instead.
 
-![Update your image file](https://i.imgur.com/hlR9zWo.png)
+![Update your image file](https://i.imgur.com/61kh5zN.png)
 
 ## Links
 
-* [Web site](http://www.potobooth.com:3000/)
+* [Web site](http://www.potobooth.com)
 * [Documentation](https://github.com/HariniGB/my_cloud_project/blob/master/README.md)
 * [Source code](https://github.com/HariniGB/my_cloud_project/)

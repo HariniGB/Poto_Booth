@@ -4,7 +4,7 @@ Poto Booth Website
 
 Poto Booth is a cloud born 3 tier web application, that provides the end users a secured environment to upload, download, view and modify their image files in cloud. This application is entirely build on Amazon Web Services (AWS) like EC2, ELB, Lambda, AutoScaling Group, RDS (PostgreSQL), CloudFront, S3, S3 Transfer Acceleration, R53, CloudWatch, SNS and Route 53.
 
-[![Poto Booth demo](https://i.imgur.com/co7enBZ.png)](http://www.potobooth.com/)
+[![Poto Booth demo](https://i.imgur.com/co7enBZ.png)](https://www.youtube.com/watch?v=3VDgBgRh1Xs&feature=youtu.be)
 
 ## Table of content
 
@@ -90,6 +90,6 @@ Poto booth is a cloud born 3 tier web application, that provides the end users a
 
 ## Links
 
-* [Web site](http://www.potobooth.com)
+* [Web site](https://www.youtube.com/watch?v=3VDgBgRh1Xs&feature=youtu.be)
 * [Documentation](https://github.com/HariniGB/my_cloud_project/blob/master/README.md)
 * [Source code](https://github.com/HariniGB/my_cloud_project/)
